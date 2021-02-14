@@ -1,0 +1,12 @@
+{
+    debug
+    http_port 9080
+    https_port 9443
+    order chrome before file_server
+}
+
+:9080 {
+    root * x/
+    chrome http://localhost:9223
+    file_server
+}
